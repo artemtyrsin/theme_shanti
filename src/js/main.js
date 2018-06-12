@@ -1,7 +1,7 @@
 $(function() {
 
   if ($.fn.slick) {
-    $(".slider").slick({
+    $('.slider').slick({
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -13,10 +13,12 @@ $(function() {
   }
 
   if($.fn.gpGallery) {
-    $(".photos").gpGallery('.photo__item', {
+    $('.photos').gpGallery('.photo__item', {
       'row_min_height':280,
       'row_max_height':360,
       'gutter':6
     });
   }
+
+  $('.entry-content table').addClass('table');
 });

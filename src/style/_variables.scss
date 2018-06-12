@@ -54,7 +54,9 @@ $black: #2e2e2e !default;
 
 $theme-colors: (
   primary: #2F3640,
-  secondary: #974C76
+  secondary: #974C76,
+  light: rgba(47, 54, 64, 0.04),
+  lighter: rgba(47,54,64, 0.02)
 ) !default;
 
 @function theme-color($key: "primary") {
