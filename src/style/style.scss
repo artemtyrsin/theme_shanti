@@ -1,7 +1,6 @@
 @import "variables";
 @import "mixins";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Oswald:500&subset=cyrillic');
-
 // Global styles
 button:focus {
   outline: none;
@@ -31,7 +30,6 @@ a {
     color: theme_color(secondary);
   }
 }
-
 // Page
 .page {
   display: flex;
@@ -70,7 +68,6 @@ a {
     }
   }
 }
-
 @import "blocks/header";
 
 .slider {
@@ -119,30 +116,23 @@ a {
   font-size: 1.4rem;
   padding: 30px 0;
 }
-
 @import "blocks/reviews";
 @import "blocks/posts";
 @import "blocks/footer";
 
 .photos {
+  background-color: rgba(47,54,64,.02);
+  padding-bottom: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  overflow: hidden;
 
-      background-color: rgba(47,54,64,.02);
+  img {
+    max-width: 100%;
+  }
 
-      padding-bottom: 6px;
-      padding-left: 6px;
-
-      overflow: hidden;
-
-
-
-
-        img {
-
-          max-width: 100%;
-        }
-
-
-  &::after, &::before {
+  &::after,
+  &::before {
     display: table;
     content: '';
     clear: both;

@@ -14,7 +14,8 @@
     function getWidthForBucket(bucket, extra) {
         var width = 0;
         if (bucket.length) {
-            width = $settings.gutter * (bucket.length - 1);
+        
+            //width = $settings.gutter * (bucket.length - 1);
             $.each(bucket, function(idx, item) {
                 width += item.width;
             });
@@ -69,8 +70,11 @@
             }
             last_bucket.items.push(item);
         });
-        buckets.push(last_bucket);
         last_bucket.last = true;
+        buckets.push(last_bucket);
+
+
+
 
         $.each(buckets, function(idx, bucket) {
             if (!bucket.last) {
@@ -87,10 +91,10 @@
                     container = item.container;
                 $last_item = item;
 
-                pic.css({
+                /*pic.css({
                     height: item.height+"px",
                     width: item.width+"px"
-                });
+                });*/
                 item.container.css({
                     height: item.height+"px",
                     width: item.width+"px",
@@ -105,50 +109,10 @@
                         clear: 'left'
                     });
                 }
-                pic.is_hover = null;
-                pic.hover(function() {
-                    pic.stop().addClass('gp-gallery-picture-hover');
-                    container.addClass('gp-gallery-hover');
-
-                    if (item.original_height > item.height && item.original_width > item.width) {
-                        pic.is_hover = setTimeout(function() {
-                            pic.removeClass('gp-gallery-picture-hover');
-                            pic.addClass('gp-gallery-picture-zoom');
-
-                            if (pic.is_hover) {
-                                pic.animate({
-                                    marginTop: '-' + (item.original_height - item.height)/2 + 'px',
-                                    marginLeft: '-' + (item.original_width - item.width)/2 + 'px',
-                                    width: item.original_width + 'px',
-                                    height: item.original_height + 'px'
-                                }, 100);
-                            }
-                        }, 200);
-                    }
-                }, function() {
-                    if (pic.is_hover) {
-                        clearTimeout(pic.is_hover);
-                        pic.is_hover = null;
-                    }
-                    if (item.original_height > item.height && item.original_width > item.width && pic.hasClass('gp-gallery-picture-zoom')) {
-                        pic.stop().animate({
-                            marginTop: '-6px',
-                            marginLeft: '-6px',
-                            width: item.width + 'px',
-                            height: item.height + 'px'
-                        }, 50, function() {
-                            container.removeClass('gp-gallery-hover');
-                            pic.removeClass('gp-gallery-picture-hover').removeClass('gp-gallery-picture-zoom').css({
-                                margin: ''
-                            });
-                        });
-                    } else {
-                        container.removeClass('gp-gallery-hover');
-                        pic.removeClass('gp-gallery-picture-hover').removeClass('gp-gallery-picture-zoom');
-                    }
-                });
             });
-            if (!bucket.last && $last_item) {
+            if ($last_item) {
+              console.log($last_item);
+
                 $last_item.width = $last_item.width + max_bucket_width - getWidthForBucket(bucket.items);
                 $last_item.pic.css({
                     width: $last_item.width + 'px'
