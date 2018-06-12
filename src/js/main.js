@@ -11,4 +11,12 @@ $(function() {
       fade: true
     });
   }
+
+  if($.fn.gpGallery) {
+    $(".photos").gpGallery('.photo__item', {
+      'row_min_height':280,
+      'row_max_height':360,
+      'gutter':6
+    });
+  }
 });

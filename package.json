@@ -7,6 +7,10 @@
     "build": "gulp"
   },
   "author": "artemtyrsin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artemtyrsin/theme_shanti.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.15.0",

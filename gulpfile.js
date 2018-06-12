@@ -52,6 +52,16 @@ gulp.task('js', function() {
     .pipe(reload({
       stream: true
     }));
+
+  gulp.src('src/js/vendor/*.js')
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest('public/js/vendor'))
+    .pipe(reload({
+      stream: true
+    }));
 });
 
 gulp.task('webserver', function() {

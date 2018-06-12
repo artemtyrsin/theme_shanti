@@ -123,3 +123,28 @@ a {
 @import "blocks/reviews";
 @import "blocks/posts";
 @import "blocks/footer";
+
+.photos {
+
+      background-color: rgba(47,54,64,.02);
+
+      padding-bottom: 6px;
+      padding-left: 6px;
+
+      overflow: hidden;
+
+
+
+
+        img {
+
+          max-width: 100%;
+        }
+
+
+  &::after, &::before {
+    display: table;
+    content: '';
+    clear: both;
+  }
+}
