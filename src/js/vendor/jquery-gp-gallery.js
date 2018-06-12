@@ -14,7 +14,7 @@
     function getWidthForBucket(bucket, extra) {
         var width = 0;
         if (bucket.length) {
-        
+
             //width = $settings.gutter * (bucket.length - 1);
             $.each(bucket, function(idx, item) {
                 width += item.width;
@@ -111,8 +111,6 @@
                 }
             });
             if ($last_item) {
-              console.log($last_item);
-
                 $last_item.width = $last_item.width + max_bucket_width - getWidthForBucket(bucket.items);
                 $last_item.pic.css({
                     width: $last_item.width + 'px'
