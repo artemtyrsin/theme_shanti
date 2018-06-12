@@ -14,4 +14,15 @@ Shanti - это светлая бизнес-тема, разработанная
 <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
 <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
 ```
-#### Основное меню
+### Слайдер
+![](https://artemtyrsin.github.io/themes/shanti/screenshots/slider.png)
+### Отзывы
+![](https://artemtyrsin.github.io/themes/shanti/screenshots/reviews.png)
+### Публикации
+![](https://artemtyrsin.github.io/themes/shanti/screenshots/posts.png)
+### Фотографии
+![](https://artemtyrsin.github.io/themes/shanti/screenshots/photos.png)
+За вывод этого блока отвечает модуль [фотогалерея](https://www.diafan.ru/dokument/full-manual/modules/photo/)
+### Подвал сайта
+![](https://artemtyrsin.github.io/themes/shanti/screenshots/footer.png)
+В подвале используются теже сквозные блоки что и в шапке контакты и социальные сети, при этом добавляются два новых: "Обо мне" и "Занятия". Блок **занятия** это меню, настраиваеться оно так же как и **основное меню** сайта [согласно документации](https://www.diafan.ru/dokument/full-manual/sysmodules/menu/). 
