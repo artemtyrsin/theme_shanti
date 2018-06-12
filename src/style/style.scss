@@ -146,34 +146,42 @@ a {
 }
 
 .breadcrumb {
-  background: none;
-  padding: 0;
+
+  &-line {
+    background: theme-color(light);
+  }
+  background:none;
   border-radius: 0;
   font-size: 0.8em;
-  margin-bottom: 60px;
+  margin: 0;
+  padding: 1rem 0;
 }
 
 .pagination {
 
-  margin-top: 60px;
+  margin-top: 80px;
 
   .page-link {
     border:none;
     border-radius: 0 !important;
-    background-color: theme-color(primary);
-    color: $white;
+    background-color: theme-color(light);
+    color: inherit;
     margin-left: 3px;
     font-size: 0.8rem;
 
-    transition: background-color 0.3s ease;
+    transition: background-color 0.1s ease, color 0.1s ease;
 
     &:hover {
       background-color: theme-color(secondary);
+      color:$white;
     }
   }
 }
 
 .entry {
+
+  padding-top: 60px;
+  padding-bottom: 60px;
   &-content {
     a {
       color: theme-color(secondary);
@@ -189,6 +197,21 @@ a {
   }
 
   &-title {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    color: theme-color(secondary);
+    font-weight: 500;
+
+  }
+}
+
+
+.page.inner {
+  .page__header {
+    //border-bottom: 2px solid theme-color(secondary);
+    box-shadow: 0 6px 16px 0px theme-color(lighter);
+  }
+
+  .page__content {
+    background-color: theme-color(lighteer);
   }
 }
