@@ -1,0 +1,24 @@
+{
+  "name": "theme_shanti",
+  "version": "1.0.0",
+  "description": "",
+  "main": "public/index.html",
+  "scripts": {
+    "build": "gulp"
+  },
+  "author": "artemtyrsin",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.15.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.3.2",
+    "gulp-watch": "^4.3.9",
+    "gulp-util": "~2.2.14",
+    "gulp-minify-css": "~0.3.1",
+    "gulp-rename": "~1.2.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {}
+}

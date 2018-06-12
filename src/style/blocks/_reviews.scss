@@ -1,0 +1,45 @@
+.reviews {
+  margin-bottom: 50px;
+  @include media-breakpoint-down(md) {
+    div[class^="col-"] + div[class^="col-"] {
+      margin-top: 80px;
+    }
+  }
+
+  &__item {
+    background-color: rgba(47, 54, 64, 0.04);
+    padding: 40px 60px 70px;
+    position: relative;
+    height: 100%;
+    @include media-breakpoint-down(sm) {
+      padding: 20px 22px 70px;
+      height: auto;
+    }
+
+    &--image {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(50%);
+
+      .image {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+      }
+    }
+
+    &--author {
+      margin-top: 1rem;
+      font-weight: bold;
+
+      &::before {
+        content: '\2014';
+        margin-right: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.page__header {
+  a {
+    color: inherit;
+    transition: opacity 0.3s ease-out;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.925;
+    }
+  }
+
+  .top-line {
+    background-color: theme-color(primary);
+    color: $white;
+    padding: 12px 0 14px;
+
+  }
+
+  .navbar {
+    padding: 1.8rem 0;
+  }
+  .navbar-brand {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+.header__phone, .footer__phone {
+  line-height: 1;
+
+  a {
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  address {
+    margin: 0;
+    font-weight: 300;
+    font-size: 0.8rem;
+  }
+}
+
+
+.header__social {
+  font-size:1.2rem;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  > a {
+    margin-left: 6px;
+  }
+}
+
+#main-menu {
+  .nav-item {
+    font-weight: bold;
+
+    &.active {
+      opacity: 0.5;
+    }
+
+  }
+
+  .dropdown-menu {
+    padding: 0;
+    border-color: rgba(47, 54, 64, 0.1);
+    box-shadow: 3px 6px 16px 0px rgba(47, 54, 64, 0.1);
+    background-color: $white;
+    border-radius: 0;
+
+    @include media-breakpoint-down(sm) {
+      border:none;
+      box-shadow: none;
+    }
+  }
+
+  .dropdown-item {
+    padding: 6px 16px;
+    font-size: 0.8rem;
+
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+    }
+
+    &:hover {
+      background-color: rgba(47, 54, 64, 0.04);
+    }
+  }
+
+  .dropdown-toggle::after {
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900;
+    content: '\f078';
+    font-size:0.9em;
+    border:none;
+    width:auto;
+    height: auto;
+    vertical-align: middle;
+    line-height: 1em;
+    margin-left: 0.5em;
+  }
+
+  .nav-link {
+    color: inherit;
+    font-weight: bold;
+    font-size:0.9rem;
+    text-transform: uppercase;
+
+    &:hover {
+      color:theme-color(secondary);
+    }
+  }
+}
+
+.navbar-expand-md {
+  @include media-breakpoint-down(sm) {
+    > .container,
+    > .container-fluid {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    .navbar-toggler {
+      padding-right: 0;
+    }
+  }
+}
