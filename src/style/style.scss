@@ -127,13 +127,35 @@ a {
 @import "blocks/footer";
 
 .photos {
-  background-color: theme-color(lighter);
-  padding-bottom: 6px;
+
+  &::after, &::before {
+    display: table;
+    content: '';
+  }
+
+  margin-right: -6px;
+
+
+/*  padding-bottom: 6px;
   padding-left: 6px;
   padding-right: 6px;
   overflow: hidden;
+*/
+
+  .photo__item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    float:left;
+    margin-bottom: 6px;
+    margin-right: 6px;
+  }
 
   img {
+    visibility: hidden;
+    height: 280px;
+    width: auto;
     max-width: 100%;
   }
 
@@ -146,11 +168,10 @@ a {
 }
 
 .breadcrumb {
-
   &-line {
     background: theme-color(light);
   }
-  background:none;
+  background: none;
   border-radius: 0;
   font-size: 0.8em;
   margin: 0;
@@ -158,30 +179,28 @@ a {
 }
 
 .pagination {
-
   margin-top: 80px;
 
   .page-link {
-    border:none;
+    border: none;
     border-radius: 0 !important;
     background-color: theme-color(light);
     color: inherit;
     margin-left: 3px;
     font-size: 0.8rem;
-
     transition: background-color 0.1s ease, color 0.1s ease;
 
     &:hover {
       background-color: theme-color(secondary);
-      color:$white;
+      color: $white;
     }
   }
 }
 
 .entry {
-
   padding-top: 60px;
   padding-bottom: 60px;
+
   &-content {
     a {
       color: theme-color(secondary);
@@ -200,18 +219,38 @@ a {
     margin-bottom: 60px;
     color: theme-color(secondary);
     font-weight: 500;
-
   }
 }
-
 
 .page.inner {
   .page__header {
     //border-bottom: 2px solid theme-color(secondary);
-    box-shadow: 0 6px 16px 0px theme-color(lighter);
+    box-shadow: 0 6px 16px 0 theme-color(lighter);
   }
 
   .page__content {
     background-color: theme-color(lighteer);
+  }
+}
+
+.dropdown-submenu {
+  position: relative;
+  @include media-breakpoint-up(sm) {
+    .dropdown-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &::after {
+        content: '\f054' !important;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    top: -1px;
+    border-left: none;
+    left: 100%;
+    margin: 0 0.1rem;
   }
 }
