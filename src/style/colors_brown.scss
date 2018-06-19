@@ -1,0 +1,11 @@
+@import "variables";
+$theme-colors: (
+  primary: #644D45,
+  secondary: #F1691B,
+  light: rgba(47, 54, 64, 0.04),
+  lighter: rgba(47,54,64, 0.02),
+  lighteer:rgba(47,54,64, 0.0085),
+  white: #fff,
+  black: #2e2e2e
+);
+@import "colors";

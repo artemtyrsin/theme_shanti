@@ -29,6 +29,11 @@
         background-size: cover;
         background-position: center;
         border-radius: 50%;
+        background-color: theme-color(secondary);
+        text-align: center;
+        line-height: 100px;
+        color:theme-color(white);
+        font-size: 40px;
       }
     }
 
@@ -41,5 +46,11 @@
         margin-right: 5px;
       }
     }
+  }
+}
+
+.reviews__list {
+  [class^="col-"] {
+    margin-bottom: 100px;
   }
 }

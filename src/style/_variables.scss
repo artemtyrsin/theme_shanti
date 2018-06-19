@@ -49,15 +49,14 @@ $grid-breakpoints: (
 // Color system
 //
 
-$white: #fff !default;
-$black: #2e2e2e !default;
-
 $theme-colors: (
   primary: #2F3640,
   secondary: #974C76,
   light: rgba(47, 54, 64, 0.04),
   lighter: rgba(47,54,64, 0.02),
-  lighteer:rgba(47,54,64, 0.0085)
+  lighteer:rgba(47,54,64, 0.0085),
+  white: #fff,
+  black: #2e2e2e
 ) !default;
 
 @function theme-color($key: "primary") {

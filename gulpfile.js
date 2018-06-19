@@ -13,6 +13,24 @@ var gulp = require("gulp"), //http://gulpjs.com/
 
 gulp.task("sass", function() {
   log("Generate CSS files " + (new Date()).toString());
+
+  var colors = ['acapulco','brown','default','gray','nero'];
+
+  for (var i in colors) {
+    var color = colors[i];
+    gulp.src('src/style/colors_' + color + '.scss')
+      .pipe(sass({
+        style: 'expanded'
+      }))
+      .pipe(autoprefixer("last 3 version", "safari 5", "ie 8", "ie 9", 'ios 6', 'android 4'))
+      //.pipe(gulp.dest("public/css"))
+      .pipe(rename({
+        suffix: '.min'
+      }))
+      .pipe(minifycss())
+      .pipe(gulp.dest('public/css'));
+  }
+
   gulp.src('src/style/style.scss')
     .pipe(sass({
       style: 'expanded'

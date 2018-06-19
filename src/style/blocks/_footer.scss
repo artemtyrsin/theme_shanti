@@ -1,5 +1,5 @@
 .page__footer {
-  color: $white;
+  color: theme-color(white);
   background-color: theme_color(primary);
   padding: 60px 0 20px;
   @include media-breakpoint-down(sm) {
@@ -92,7 +92,7 @@
     text-align: center;
   }
 
-  > a {
+  a {
     margin-right: 6px;
   }
 }

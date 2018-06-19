@@ -1,0 +1,116 @@
+
+
+a:hover {
+	color: theme-color(secondary);
+}
+
+.btn {
+	border-color: theme-color(primary);
+	color: theme-color(primary);
+	background-color: transparent;
+
+	&:hover {
+		border-color: theme-color(secondary);
+		color: theme-color(secondary);
+	}
+}
+
+.page {
+	color: theme-color(black);
+	background-color: theme-color(white);
+
+	&__content.inner {
+		background-color: theme-color(lighter);
+	}
+
+	&__item.second {
+		background-color: theme-color(light);
+	}
+
+	&__header .top-line {
+		background-color: theme-color(primary);
+		color: theme-color(white);
+	}
+
+	&__footer {
+		color: theme-color(white);
+		background-color: theme-color(primary);
+	}
+}
+
+#main-menu {
+	.dropdown-menu {
+		border-color: rgba(47, 54, 64, 0.1);
+		box-shadow: 3px 6px 16px 0 rgba(47, 54, 64, 0.1);
+		background-color: theme-color(white);
+	}
+
+	.dropdown-item:hover {
+		background-color: theme-color(light);
+	}
+
+	.nav-link:hover {
+		color: theme-color(secondary);
+	}
+}
+
+.slider .slick-dots > li.slick-active > button {
+	background-color: theme-color(white);
+}
+
+.slider .slick-dots > li > button {
+	border-color: theme-color(white);
+}
+
+.banner {
+	color: theme-color(white);
+	background-color: theme-color(secondary);
+}
+
+.reviews__item {
+	background-color: theme-color(light);
+}
+
+.reviews__item--image .image {
+	background-color: theme-color(secondary);
+	color: theme-color(white);
+}
+
+.posts .post__item--date {
+	color: #999;
+}
+
+.breadcrumb-line {
+	background-color: theme-color(light);
+}
+
+.pagination {
+	.page-link {
+		background-color: theme-color(light);
+
+		&.active,
+		&:hover {
+			background-color: theme-color(secondary);
+			color: theme-color(white);
+		}
+	}
+}
+
+.entry *[class$="_text"] a,
+.entry-content a {
+	color: theme-color(secondary);
+}
+
+.entry-title {
+	color: theme-color(secondary);
+}
+
+.page.inner {
+	.page__header {
+		box-shadow: 0 6px 16px 0 theme-color(lighter);
+	}
+
+	.page__content {
+		background-color: theme-color(lighteer);
+	}
+}
